@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Fundo from "./Components/fundo.tsx";
+import { Y_CHAO } from "./settings/constants.ts";
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="App"
+      >
+      <div
+        style={{
+          backgroundImage:`url(${require('./Components/images/parede.jpg')})`,
+          height:Y_CHAO,
+          width:'100%',
+          position:"relative"
+        }}
         >
-          Learn React
-        </a>
-      </header>
+      <Fundo/>
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
