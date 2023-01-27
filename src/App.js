@@ -1,13 +1,15 @@
 import React from "react";
 import Fundo from "./Components/fundo.tsx";
+import Quadro from "./Components/quadros.tsx";
 import { Y_CHAO } from "./settings/constants.ts";
 import './App.css'
+import Personagem from "./Components/personagem.tsx";
 
 function App() {
   return (
     <div className="App"
       >
-      <div
+      {/* <div
         style={{
           backgroundImage:`url(${require('./Components/images/parede.jpg')})`,
           height:Y_CHAO,
@@ -16,7 +18,9 @@ function App() {
         }}
         >
       <Fundo/>
-      </div>
+      </div> */}
+      <Personagem position={{x:10,y:10}} />
+      <Quadro/>
     </div>
   )
 }

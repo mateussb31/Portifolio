@@ -8,7 +8,7 @@ const Chao = () => {
     <div className="chao"
       style={{
         backgroundColor: "#ea1744",
-        height: Y_CHAO,
+        height: 0,
         width: '100%',
         display: "flex",
         flexDirection: "row",
@@ -18,7 +18,7 @@ const Chao = () => {
       <div className="tapete"
         style={{
           backgroundColor: "#dd4b1a",
-          height: Y_TAPETE,
+          height: 0,
           width: '95%',
           marginBottom: 'auto',
           marginTop: 'auto',
