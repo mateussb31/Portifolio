@@ -1,7 +1,5 @@
 import React from "react";
-import Personagem from "./personagem.tsx";
-import './estilo.css'
-import { Y_CHAO, Y_TAPETE } from "../settings/constants.ts";
+
 
 const Chao = () => {
   return (
@@ -62,7 +60,6 @@ const Fundo = () => {
   return (
     <div>
       <Chao />
-      <Personagem />
     </div>
   )
 }
