@@ -1,27 +1,16 @@
 import React from "react";
-import Fundo from "./Components/fundo.tsx";
-import Quadro from "./Components/quadros.tsx";
-import { Y_CHAO } from "./settings/constants.ts";
 import './App.css'
 import Personagem from "./Components/personagem/personagem.tsx";
+import Posiciona from "./Components/Projetos/Posicionador/index.tsx";
+import { ELinks } from "./settings/constants.ts";
 
 function App() {
   return (
     <div className="App">
-      <div className="Board">
+      <div className="Board" style={{width:(`${ELinks.length}`*1300)+705}}>
         <Personagem position={{ x: 10, y: 10 }} />
-        <Quadro />
+        <Posiciona/>
       </div>
-      {/* <div
-        style={{
-          backgroundImage:`url(${require('./Components/images/parede.jpg')})`,
-          height:Y_CHAO,
-          width:'100%',
-          position:"relative"
-        }}
-        >
-      <Fundo/>
-      </div> */}
     </div>
   )
 }

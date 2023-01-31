@@ -1,0 +1,17 @@
+@keyframes animacao{
+    from{
+        background-position-x: 0px ;
+    }
+    to{
+        background-position-x: -384px;
+    }
+}
+
+@font-face {
+    font-family: "FFF Forward";
+    src: local ("FFF Forward"), url("../../Fonts/FFFFORWA.TTF"), format("truetype");
+}
+.texto{
+    font-family: 'FFF Forward';
+    color:antiquewhite;
+}

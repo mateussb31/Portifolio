@@ -11,3 +11,5 @@ export enum EDirecao{
     DOWN = "ArrowDown",
     DANCE = ""
 }
+export const ELinks= ["https://github.com/mateussb31/Connect_sigaa","https://github.com/mateussb31"]
+    

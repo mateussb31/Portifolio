@@ -1,5 +1,5 @@
 import React from "react";
-import '../estilo.css'
+import './estilo.css'
 import useCharacterMoviment from "../../Hooks/useCharacterMoviment/index.ts";
 import { EDirecao } from "../../settings/constants.ts";
 import { HEIGHT_PERSONAGEM, WIDTH_PERSONAGEM } from "../../settings/constants.ts";
@@ -20,17 +20,17 @@ const Personagem = (props: IProps) => {
             left: 3 * posicao.x,
             position: 'absolute'
         }}>
-            <div
+            <div className="texto"
                 style={{
                     height:70,
-                    width:110,
-                    opacity:`${estado === true? 1 : 0}`,
-                    backgroundColor:"white",
+                    width:200,
+                    display:`${estado === true? "inline-block" : "none"}`,
                     position:"relative",
                     zIndex:1,
-                    top:70,
-                    left:70
-                }}>Deseja visualizar este projeto?</div>
+                    left:90,
+                    top:110,
+
+                }}>Deseja visualizar este projeto? </div>
             <div
                 style={{
                     height: HEIGHT_PERSONAGEM,
@@ -41,7 +41,7 @@ const Personagem = (props: IProps) => {
                     position: "relative",
                     animation: "animacao 0.7s steps(4) infinite",
                     transform: `scaleX(${direcao === EDirecao.RIGHT ? 1 : -1})`,
-                    zIndex: 1,
+                    zIndex: 1
                 }}
             />
         </div>
