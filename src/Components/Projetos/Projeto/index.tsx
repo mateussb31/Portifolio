@@ -3,12 +3,14 @@ const Quadro = (props) => {
 
     return (
         <div style={{
-            backgroundColor: "red",
+            backgroundImage:`url(${require("../../images/porta.png")})`,
             position:"absolute",
-            height:100,
-            width:100,
-            bottom:230,
-            left:0.5*window.innerWidth
+            backgroundSize:"contain",
+            backgroundRepeat:"no-repeat",
+            bottom:'20vh',
+            width:300,
+            height:300,
+            left:(0.6*window.innerWidth)*props.posicao
         }}></div>
     )
 }

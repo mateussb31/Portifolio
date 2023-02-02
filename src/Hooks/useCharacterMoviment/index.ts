@@ -1,4 +1,4 @@
-import { EDirecao, ELinks } from './../../settings/constants.ts';
+import { EDirecao, ELinks, X_ITEM,WIDTH_PERSONAGEM } from './../../settings/constants.ts';
 import useEventListener from "@use-it/event-listener";
 import { useState } from "react";
 
@@ -11,7 +11,8 @@ export default function useCharacterMoviment(posicaoInicial) {
         event.preventDefault()
         switch (event.key) {
             case EDirecao.RIGHT:
-                if (posicao.x < (ELinks.length * 1300 + 600) / 3) {
+                if (posicao.x + WIDTH_PERSONAGEM/3 < (ELinks.length+1)* X_ITEM / 3) {
+                    console.log(ELinks.length)
                     mudancaDePosicao({ x: posicao.x + 5, y: posicao.y })
                     mudancaDeDirecao(EDirecao.RIGHT)
                     window.scroll({ left: posicao.x * 2 })
