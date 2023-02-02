@@ -11,17 +11,18 @@ export default function useCharacterMoviment(posicaoInicial) {
         event.preventDefault()
         switch (event.key) {
             case EDirecao.RIGHT:
-                if (posicao.x < (ELinks.length*1300+600)/3) {
+                if (posicao.x < (ELinks.length * 1300 + 600) / 3) {
                     mudancaDePosicao({ x: posicao.x + 5, y: posicao.y })
                     mudancaDeDirecao(EDirecao.RIGHT)
-                    window.scroll({ left: posicao.x * 2.5 })
+                    window.scroll({ left: posicao.x * 2 })
                 }
                 break;
             case EDirecao.LEFT:
                 if (posicao.x > 0) {
                     mudancaDePosicao({ x: posicao.x - 5, y: posicao.y })
                     mudancaDeDirecao(EDirecao.LEFT)
-                    window.scroll({ left:posicao.x * 2.5})
+                    window.scroll({ left: posicao.x * 2 })
+                    console.log(posicao.x)
                 }
                 break;
             case EDirecao.UP:
@@ -32,8 +33,11 @@ export default function useCharacterMoviment(posicaoInicial) {
                 if (posicao.y > 0)
                     mudancaDePosicao({ x: posicao.x, y: posicao.y - 5 })
                 break;
+            case EDirecao.UP && EDirecao.RIGHT:
+                mudancaDePosicao({ x: posicao.x + 5, y: posicao.y + 5 })
+                break;
         }
-        
+
     })
     return {
 

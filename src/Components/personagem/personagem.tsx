@@ -4,7 +4,7 @@ import useCharacterMoviment from "../../Hooks/useCharacterMoviment/index.ts";
 import { EDirecao } from "../../settings/constants.ts";
 import { HEIGHT_PERSONAGEM, WIDTH_PERSONAGEM } from "../../settings/constants.ts";
 import useVerifyPosition from "../../Hooks/useVerifyPosition/index.ts";
-
+import '../../Fonts/FFFFORWA.TTF';
 
 interface IProps {
     position: { x: number; y: number }
@@ -18,18 +18,18 @@ const Personagem = (props: IProps) => {
         <div style={{
             bottom: 3 * posicao.y,
             left: 3 * posicao.x,
-            position: 'absolute'
+            position: 'absolute',
+            
         }}>
             <div className="texto"
                 style={{
-                    height:70,
-                    width:200,
+                    height:"5rem",
+                    width:"15rem",
                     display:`${estado === true? "inline-block" : "none"}`,
                     position:"relative",
                     zIndex:1,
-                    left:90,
-                    top:110,
-
+                    left:WIDTH_PERSONAGEM,
+                    top:100
                 }}>Deseja visualizar este projeto? </div>
             <div
                 style={{

@@ -1,7 +1,8 @@
 .Board {
     background-image: url("\\Components\\images\\fc9642b02ca644cff040c75cbe24698c.jpg");
     background-color: #2D2424;
-    background-size: contain;
+    background-size: 1400px;
+    background-repeat: repeat-x;
     height: 100vh ;
     overflow: hidden;
 }

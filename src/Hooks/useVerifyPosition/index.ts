@@ -6,9 +6,9 @@ export default function useVerifyPosition(cordenadasPersonagem: { x: number, y: 
     var link = ""
     for(let cont = 0; cont< ELinks.length; cont++){
         if (
-            cordenadasPersonagem.x * 3 + WIDTH_PERSONAGEM > 705+cont*1290 &&
-            cordenadasPersonagem.x * 3 < 705+(cont*1290) + 290 &&
-            cordenadasPersonagem.y * 3 + ALTURA_IMAGEM_PERSONAGEM > 159
+            cordenadasPersonagem.x * 3 + WIDTH_PERSONAGEM > (0.4875*window.innerWidth)+cont*(0.9*window.innerWidth) &&
+            cordenadasPersonagem.x * 3 < (0.4875*window.innerWidth)+cont*(0.9*window.innerWidth) + (0.16*window.innerWidth) &&
+            cordenadasPersonagem.y * 3 + ALTURA_IMAGEM_PERSONAGEM > 0.2*window.innerHeight
         ) {
             visivel = true
             link = ELinks[cont]
