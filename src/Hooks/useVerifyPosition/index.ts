@@ -11,7 +11,7 @@ export default function useVerifyPosition(cordenadasPersonagem: { x: number, y: 
             cordenadasPersonagem.y * 3 + ALTURA_IMAGEM_PERSONAGEM > 0.2*window.innerHeight
         ) {
             visivel = true
-            link = ELinks[cont-1]
+            link = ELinks[cont-1].url
         }
 
     }

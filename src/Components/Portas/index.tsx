@@ -1,9 +1,9 @@
 import React from "react";
-const Quadro = (props) => {
+const Porta = (props) => {
 
     return (
         <div style={{
-            backgroundImage:`url(${require("../../images/porta.png")})`,
+            backgroundImage:`url(${require("../images/porta.png")})`,
             position:"absolute",
             backgroundSize:"contain",
             backgroundRepeat:"no-repeat",
@@ -14,4 +14,4 @@ const Quadro = (props) => {
         }}></div>
     )
 }
-export default Quadro
+export default Porta

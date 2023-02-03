@@ -1,10 +1,9 @@
 import React from "react";
-import './estilo.css'
+import './style.css'
+import { EDirecao,HEIGHT_PERSONAGEM, WIDTH_PERSONAGEM } from "../../settings/constants.ts";
 import useCharacterMoviment from "../../Hooks/useCharacterMoviment/index.ts";
-import { EDirecao } from "../../settings/constants.ts";
-import { HEIGHT_PERSONAGEM, WIDTH_PERSONAGEM } from "../../settings/constants.ts";
 import useVerifyPosition from "../../Hooks/useVerifyPosition/index.ts";
-import '../../Fonts/FFFFORWA.TTF';
+
 
 interface IProps {
     position: { x: number; y: number }
