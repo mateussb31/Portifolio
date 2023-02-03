@@ -1,6 +1,6 @@
 import React from "react";
-import { EDeco } from "../../settings/constants.ts";
-const Decoracao = (props) => {
+import { EDeco } from "../../settings/constants";
+const Decoracao = (props: any) => {
 
     return (
         <div style={{

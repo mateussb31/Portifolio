@@ -1,10 +1,10 @@
-import { EDirecao, ELinks, X_ITEM,WIDTH_PERSONAGEM } from './../../settings/constants.ts';
+import { EDirecao, ELinks, X_ITEM,WIDTH_PERSONAGEM } from './../../settings/constants';
 import useEventListener from "@use-it/event-listener";
 import { useState } from "react";
 
 
 
-export default function useCharacterMoviment(posicaoInicial) {
+export default function useCharacterMoviment(posicaoInicial : any) {
     const [posicao, mudancaDePosicao] = useState(posicaoInicial)
     const [direcao, mudancaDeDirecao] = useState(EDirecao.RIGHT)
     useEventListener('keydown', (event: any) => {

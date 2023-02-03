@@ -1,6 +1,6 @@
-import { WIDTH_PERSONAGEM, ALTURA_IMAGEM_PERSONAGEM } from './../../settings/constants.ts';
+import { WIDTH_PERSONAGEM, ALTURA_IMAGEM_PERSONAGEM } from './../../settings/constants';
 import useEventListener from '@use-it/event-listener';
-import { ELinks, X_ITEM,TAMANHO_PORTA } from '../../settings/constants.ts';
+import { ELinks, X_ITEM,TAMANHO_PORTA } from '../../settings/constants';
 export default function useVerifyPosition(cordenadasPersonagem: { x: number, y: number }) {
     var visivel = false
     var link = ""

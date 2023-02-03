@@ -1,7 +1,7 @@
 import React from "react";
-import {ELinks,X_ITEM } from "../../settings/constants.ts"
+import {ELinks,X_ITEM } from "../../settings/constants"
 
-const Chao = (props) => {
+const Chao = (props: any) => {
 
     return (
         <div style={{

@@ -1,9 +1,9 @@
 import React from "react";
-import { ELinks } from "../../settings/constants.ts";
-import Porta from "../../Components/Portas/index.tsx";
-import Decoracao from "../../Components/Decoracao/index.tsx";
-import Placa from "../../Components/Placas/index.tsx";
-import { EDeco } from "../../settings/constants.ts";
+import { ELinks } from "../../settings/constants";
+import Porta from "../../Components/Portas/index";
+import Decoracao from "../../Components/Decoracao/index";
+import Placa from "../../Components/Placas/index";
+import { EDeco } from "../../settings/constants";
 function getLinksMap() {
     const projetosArray = [];
     const decoArray = [];

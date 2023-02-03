@@ -1,5 +1,5 @@
 import React from "react";
-const Placa = (props) => {
+const Placa = (props :any) => {
 
     return (
         <div style={{

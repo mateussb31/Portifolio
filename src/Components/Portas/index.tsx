@@ -1,5 +1,5 @@
 import React from "react";
-const Porta = (props) => {
+const Porta = (props : any) => {
 
     return (
         <div style={{

@@ -1,8 +1,8 @@
 import React from "react";
 import './style.css'
-import { EDirecao,HEIGHT_PERSONAGEM, WIDTH_PERSONAGEM } from "../../settings/constants.ts";
-import useCharacterMoviment from "../../Hooks/useCharacterMoviment/index.ts";
-import useVerifyPosition from "../../Hooks/useVerifyPosition/index.ts";
+import { EDirecao,HEIGHT_PERSONAGEM, WIDTH_PERSONAGEM } from "../../settings/constants";
+import useCharacterMoviment from "../../Hooks/useCharacterMoviment/index";
+import useVerifyPosition from "../../Hooks/useVerifyPosition/index";
 
 
 interface IProps {
