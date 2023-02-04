@@ -26,21 +26,21 @@ const Personagem = (props: IProps) => {
                     width:"15rem",
                     display:`${estado === true? "inline-block" : "none"}`,
                     position:"relative",
-                    zIndex:1,
+                    zIndex:2,
                     left:WIDTH_PERSONAGEM,
-                    top:100
+                    top:100,
                 }}>Deseja visualizar este projeto? </div>
             <div
                 style={{
                     height: HEIGHT_PERSONAGEM,
                     width: WIDTH_PERSONAGEM,
-                    background: `url(${require("./../images/HERO.png")})`,
+                    background: `url(${require("./../images/movimentacao.png")})`,
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
+                    backgroundSize:"cover",
                     position: "relative",
-                    animation: "animacao 0.7s steps(4) infinite",
-                    transform: `scaleX(${direcao === EDirecao.RIGHT ? 1 : -1})`,
-                    zIndex: 1
+                    animation: "animacao 4s steps(4) infinite",
+                    transform: `scaleX(${direcao === EDirecao.RIGHT ? -1 : 1})`,
+                    zIndex: 2
                 }}
             />
         </div>

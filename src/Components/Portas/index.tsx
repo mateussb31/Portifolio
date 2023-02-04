@@ -7,10 +7,10 @@ const Porta = (props : any) => {
             position:"absolute",
             backgroundSize:"contain",
             backgroundRepeat:"no-repeat",
-            bottom:'20vh',
-            width:300,
-            height:300,
-            left:(0.6*window.innerWidth)*props.posicao
+            bottom:'22vh',
+            width:375,
+            height:375,
+            left:(0.7*window.innerWidth)*props.posicao
         }}></div>
     )
 }

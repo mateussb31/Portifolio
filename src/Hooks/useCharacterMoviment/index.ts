@@ -12,30 +12,25 @@ export default function useCharacterMoviment(posicaoInicial : any) {
         switch (event.key) {
             case EDirecao.RIGHT:
                 if (posicao.x + WIDTH_PERSONAGEM/3 < (ELinks.length+1)* X_ITEM / 3) {
-                    console.log(ELinks.length)
-                    mudancaDePosicao({ x: posicao.x + 5, y: posicao.y })
+                    mudancaDePosicao({ x: posicao.x + 3, y: posicao.y })
                     mudancaDeDirecao(EDirecao.RIGHT)
-                    window.scroll({ left: posicao.x * 2 })
+                    window.scroll({ left: posicao.x * 3 })
                 }
                 break;
             case EDirecao.LEFT:
                 if (posicao.x > 0) {
-                    mudancaDePosicao({ x: posicao.x - 5, y: posicao.y })
+                    mudancaDePosicao({ x: posicao.x - 3, y: posicao.y })
                     mudancaDeDirecao(EDirecao.LEFT)
-                    window.scroll({ left: posicao.x * 2 })
-                    console.log(posicao.x)
+                    window.scroll({ left: posicao.x * 3 })
                 }
                 break;
             case EDirecao.UP:
-                if (posicao.y < window.innerHeight * 8 / 100)
-                    mudancaDePosicao({ x: posicao.x, y: posicao.y + 5 })
+                if (posicao.y < window.innerHeight * 7 / 100)
+                    mudancaDePosicao({ x: posicao.x, y: posicao.y + 3 })
                 break;
             case EDirecao.DOWN:
-                if (posicao.y > 0)
-                    mudancaDePosicao({ x: posicao.x, y: posicao.y - 5 })
-                break;
-            case EDirecao.UP && EDirecao.RIGHT:
-                mudancaDePosicao({ x: posicao.x + 5, y: posicao.y + 5 })
+                if (posicao.y > 0.01*window.innerHeight)
+                    mudancaDePosicao({ x: posicao.x, y: posicao.y - 3 })
                 break;
         }
 

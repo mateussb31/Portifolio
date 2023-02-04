@@ -11,7 +11,7 @@ const Decoracao = (props: any) => {
             bottom:EDeco[props.tipo].margem,
             width:EDeco[props.tipo].width,
             height:EDeco[props.tipo].height,
-            left:(EDeco[props.tipo].distancia*window.innerWidth)+(props.posicao-1)*0.6*window.innerWidth,
+            left:(EDeco[props.tipo].distancia*window.innerWidth)+(props.posicao-1)*0.75*window.innerWidth,
             zIndex:EDeco[props.tipo].zindex
         }}></div>
     )
