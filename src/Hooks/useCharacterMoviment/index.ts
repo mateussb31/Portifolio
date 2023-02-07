@@ -1,4 +1,4 @@
-import { EDirecao, ELinks, X_ITEM,WIDTH_PERSONAGEM } from './../../settings/constants';
+import { EDirecao, WIDTH_PERSONAGEM, WIDTH_TELA } from './../../settings/constants';
 import useEventListener from "@use-it/event-listener";
 import { useState } from "react";
 
@@ -11,17 +11,17 @@ export default function useCharacterMoviment(posicaoInicial : any) {
         event.preventDefault()
         switch (event.key) {
             case EDirecao.RIGHT:
-                if (posicao.x + WIDTH_PERSONAGEM/3 < (ELinks.length+1)* X_ITEM / 3) {
+                if (posicao.x + WIDTH_PERSONAGEM/3 < WIDTH_TELA / 3) {
                     mudancaDePosicao({ x: posicao.x + 3, y: posicao.y })
                     mudancaDeDirecao(EDirecao.RIGHT)
-                    window.scroll({ left: posicao.x * 3 })
+                    window.scroll({ left: posicao.x * 2.7 })
                 }
                 break;
             case EDirecao.LEFT:
                 if (posicao.x > 0) {
                     mudancaDePosicao({ x: posicao.x - 3, y: posicao.y })
                     mudancaDeDirecao(EDirecao.LEFT)
-                    window.scroll({ left: posicao.x * 3 })
+                    window.scroll({ left: posicao.x * 2.7 })
                 }
                 break;
             case EDirecao.UP:

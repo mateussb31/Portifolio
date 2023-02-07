@@ -3,11 +3,11 @@ import './App.css'
 import Personagem from "./Components/personagem/personagem.tsx";
 import Posiciona from "./Hooks/usePositionElements/index.tsx";
 import Chao from "./Components/Chao/index.tsx";
-import { ELinks, X_ITEM } from "./settings/constants.ts";
+import {  WIDTH_TELA } from "./settings/constants";
 function App() {
   return (
     <div className="App">
-      <div className="Board" style={{ width: (`${ELinks.length + 1}` * X_ITEM) }}>
+      <div className="Board" style={{ width:WIDTH_TELA }}>
         <Personagem position={{ x: 0, y: 10 }} />
         <Posiciona />
         <Chao />

@@ -1,17 +1,19 @@
-import React from "react";
-const Porta = (props : any) => {
-
+import React, { forwardRef } from "react";
+interface IProps
+{
+    posicao: number
+}
+const Porta : React.ForwardRefRenderFunction<HTMLDivElement,IProps> = (props:IProps, ref) => {
     return (
-        <div style={{
+        <div ref={ref}style={{
             backgroundImage:`url(${require("../images/porta.png")})`,
-            position:"absolute",
-            backgroundSize:"contain",
+            backgroundPositionY:15,
             backgroundRepeat:"no-repeat",
-            bottom:'22vh',
             width:375,
             height:375,
-            left:(0.7*window.innerWidth)*props.posicao
-        }}></div>
+            order:props.posicao
+        }}>
+        </div>
     )
 }
-export default Porta
+export default forwardRef(Porta)

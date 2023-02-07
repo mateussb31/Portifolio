@@ -4,20 +4,19 @@ const Placa = (props :any) => {
     return (
         <div style={{
             backgroundImage:`url(${require("../images/placa.png")})`,
-            position:"absolute",
             backgroundSize:"contain",
             backgroundRepeat:"no-repeat",
-            bottom:'15vh',
+            backgroundPositionY:20,
             width:180,
-            height:180,
-            left:(0.93*window.innerWidth)+(props.posicao-1)*0.7*window.innerWidth,
-            zIndex:1,
+            height:170,
             textAlign: "center",
             fontFamily:"VT323",
             fontSize:"1.7rem",
-            paddingTop:37.5,
             color:"white",
-        }}>  {props.nome}</div>
+            verticalAlign:"10px",
+            order:props.posicao,
+            alignSelf:"end"
+        }}> <span style={{display:"inline-block",verticalAlign:"middle", marginTop:"35%"}}> {props.nome}</span></div>
     )
 }
 export default Placa
